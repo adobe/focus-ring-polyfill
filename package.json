@@ -1,5 +1,5 @@
 {
-  "name": "focus-ring-polyfill",
+  "name": "@spectrum/focus-ring-polyfill",
   "version": "0.1.0",
   "description": "A simple polyfill for the `:focus-ring` spec",
   "main": "index.js",
