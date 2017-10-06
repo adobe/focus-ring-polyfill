@@ -1,0 +1,21 @@
+{
+  "name": "focus-ring-polyfill",
+  "version": "0.1.0",
+  "description": "A simple polyfill for the `:focus-ring` spec",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.corp.adobe.com:Spectrum/focus-ring-polyfill.git"
+  },
+  "keywords": [
+    "css",
+    "polyfill",
+    "focus-ring"
+  ],
+  "author": "Michael Jordan <mijordan@adobe.com>",
+  "contributors": "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)",
+  "license": "Apache-2.0"
+}
