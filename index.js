@@ -22,7 +22,7 @@
     'Esc'
   ];
   var keyboardFocus = false;
-  var elements = document.querySelectorAll('.focus-ring');
+  var elements = document.getElementsByClassName('focus-ring');
 
   function onKeydownHandler(event) {
     if (event.ctrlKey || event.altKey || event.metaKey || NAVIGATION_KEYS.indexOf(event.key) === -1) {
