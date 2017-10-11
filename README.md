@@ -1,4 +1,4 @@
-[spectrum-logo](https://git.corp.adobe.com/storage/user/655/files/a13fda74-9d4a-11e6-9aec-1b320823594a)
+![spectrum-logo](https://git.corp.adobe.com/storage/user/655/files/a13fda74-9d4a-11e6-9aec-1b320823594a)
 # Focus Ring Polyfill
 
 A polyfill for the `:focus-ring` spec.
