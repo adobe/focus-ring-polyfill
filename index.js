@@ -1,5 +1,10 @@
 // Provides explicit indication of elements receiving focus through keyboard interaction rather than mouse or touch.
-(function(document) {
+(function(doc) {
+  // In case file is imported in SSR context, don't polyfill anything
+  if (!doc) {
+    return;
+  }
+
   var NAVIGATION_KEYS = [
     'Tab',
     'ArrowUp',
@@ -22,7 +27,7 @@
     'Esc'
   ];
   var keyboardFocus = false;
-  var elements = document.getElementsByClassName('focus-ring');
+  var elements = doc.getElementsByClassName('focus-ring');
 
   function onKeydownHandler(event) {
     if (event.ctrlKey || event.altKey || event.metaKey || NAVIGATION_KEYS.indexOf(event.key) === -1) {
@@ -30,8 +35,8 @@
     }
     keyboardFocus = true;
 
-    if (document.activeElement && document.activeElement !== document.body) {
-      document.activeElement.classList.add('focus-ring');
+    if (doc.activeElement && doc.activeElement !== doc.body) {
+      doc.activeElement.classList.add('focus-ring');
     }
   }
 
@@ -54,8 +59,8 @@
     event.target.classList.remove('focus-ring');
   }
 
-  document.addEventListener('keydown', onKeydownHandler, true);
-  document.addEventListener('mousedown', onMousedownHandler, true);
-  document.addEventListener('focus', onFocusHandler, true);
-  document.addEventListener('blur', onBlurHandler, true);
+  doc.addEventListener('keydown', onKeydownHandler, true);
+  doc.addEventListener('mousedown', onMousedownHandler, true);
+  doc.addEventListener('focus', onFocusHandler, true);
+  doc.addEventListener('blur', onBlurHandler, true);
 }(document));
