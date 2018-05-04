@@ -26,6 +26,20 @@
     'Left',
     'Esc'
   ];
+  var TEXT_INPUT_TYPES = [
+    'text',
+    'date',
+    'datetime-local',
+    'email',
+    'month',
+    'number',
+    'password',
+    'search',
+    'tel',
+    'time',
+    'url',
+    'week'
+  ];
   var keyboardFocus = false;
   var elements = doc.getElementsByClassName('focus-ring');
 
@@ -35,7 +49,11 @@
     }
     keyboardFocus = true;
 
-    if (doc.activeElement && doc.activeElement !== doc.body) {
+    if (doc.activeElement &&
+        doc.activeElement !== doc.body &&
+        doc.activeElement.tagName !== 'TEXTAREA' &&
+        !(doc.activeElement.tagName === 'INPUT' &&
+          TEXT_INPUT_TYPES.indexOf(doc.activeElement.type) !== -1)) {
       doc.activeElement.classList.add('focus-ring');
     }
   }
