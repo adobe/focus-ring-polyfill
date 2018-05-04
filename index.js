@@ -64,4 +64,4 @@
   doc.addEventListener('mousedown', onMousedownHandler, true);
   doc.addEventListener('focus', onFocusHandler, true);
   doc.addEventListener('blur', onBlurHandler, true);
-}(document));
+})(typeof window === "undefined" ? undefined : document);
