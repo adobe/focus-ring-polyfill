@@ -68,8 +68,9 @@
   }
 
   function onFocusHandler(event) {
-    if (keyboardFocus) {
-      event.target.classList.add('focus-ring');
+    var classList = event.target.classList;
+    if (classList && keyboardFocus) {
+      classList.add('focus-ring');
     }
   }
 
