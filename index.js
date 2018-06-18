@@ -87,8 +87,7 @@
   }
 
   function onBlurHandler(event) {
-    var classList = event.target.classList;
-    classList && classList.remove('focus-ring');
+    event.target.classList && event.target.classList.remove('focus-ring');
   }
 
   doc.addEventListener('keydown', onKeydownHandler, true);
